@@ -19,5 +19,5 @@ Arquivos TCC 1:
 	- resultados_preliminares.tex
 
 ISSUES: 
-	- et. al. deve estar em itálico nas citações
+	- et. al. deve estar em itálico nas citações - CORRIGIDO
 
