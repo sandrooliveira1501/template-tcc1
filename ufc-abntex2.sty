@@ -22,6 +22,13 @@
 \usepackage{float}
 \usepackage{graphicx}
 
+
+\newcommand{\ies}{\def \@ies}
+\newcommand{\curso}{\def \@curso}
+\newcommand{\campus}{\def \@campus}
+\newcommand{\imprimiries}{\@ies}
+\newcommand{\imprimircurso}{\@curso}
+\newcommand{\imprimircampus}{\@campus}
 \newcommand{\membroumname}{Membro um:}
 \newcommand{\membrodoisname}{Membro dois:}
 
@@ -47,7 +54,14 @@
  % \centering
   %\includegraphics[scale=0.5]{ufc-brasao.pdf}
   %\end{figure}
-    {\bfseries\Large\imprimirinstituicao\vspace*{3.5cm}}
+    %{\bfseries\Large\imprimirinstituicao\vspace*{3.5cm}}
+    {\bfseries\Large\imprimiries}  \\
+    \vspace*{0.2cm}
+    {\bfseries\Large\imprimircampus} \\
+    \vspace*{0.2cm}
+	{\bfseries\Large\imprimircurso}
+
+    \vspace*{3.5cm}
 
     {\bfseries\Large\imprimirtitulo}
     
