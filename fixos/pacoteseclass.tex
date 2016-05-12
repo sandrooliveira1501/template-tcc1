@@ -17,6 +17,12 @@
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
+\usepackage{ifthen,ifpdf}
+
+\ifpdf
+  \pdfpagewidth=\paperwidth
+  \pdfpageheight=\paperheight
+\fi
 
 % --- 
 % CONFIGURAÇÕES DE PACOTES
@@ -57,7 +63,11 @@
 %\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 %\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
-\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=3, abnt-etal-text=it, abnt-etal-list=3]{abntex2cite} 
+%Com et al nas referências
+%\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=3, abnt-etal-text=it, abnt-etal-list=3]{abntex2cite} 
+
+%Sem et al nas referências
+\usepackage[alf, abnt-emphasize=bf, bibjustif, recuo=0cm, abnt-etal-cite=3, abnt-etal-text=it, abnt-etal-list=0]{abntex2cite} 
 
 % Ambiente para alineas e e subalineas (incisos) com ponto
 \newlist{alineascomponto}{itemize}{2}
@@ -155,3 +165,8 @@
 % ---
 \makeindex
 % ---
+
+
+% Define as margens do documento
+\setlrmarginsandblock{3cm}{2cm}{*} % externa / interna
+\setulmarginsandblock{3cm}{2cm}{*} % superior / inferior
