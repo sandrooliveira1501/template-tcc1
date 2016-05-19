@@ -190,12 +190,14 @@ BANCA EXAMINADORA
 
 \renewcommand{\contentsname}{}
 
-\newcommand{\imprimirsumario}{ %
+\usepackage{bookmark}
+    
+\newcommand{\imprimirsumario}{
+    \renewcommand{\contentsname}{\normalfont\bfseries SUMÁRIO}
 	\pdfbookmark[0]{Sumário}{toc}
 	\tableofcontents*
 	\cleardoublepage
 }
-
 % Modifica o espaçamento no sumário
 % Nao ha espacos
 \setlength{\cftbeforeparagraphskip}{0pt}
