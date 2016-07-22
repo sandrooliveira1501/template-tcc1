@@ -45,6 +45,8 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{titlesec}
+\usepackage{mathptmx}                               % Usa a fonte Times New Roman
+
 
 %formatação do Sumário
 \usepackage{etoolbox}                               
@@ -156,10 +158,10 @@
 % --- 
 
 % O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
+\setlength{\parindent}{1.5cm}
 
-% Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+\setlength{\parindent}{2cm}
 
 % ---
 % compila o indice
@@ -171,3 +173,7 @@
 % Define as margens do documento
 \setlrmarginsandblock{3cm}{2cm}{*} % externa / interna
 \setulmarginsandblock{3cm}{2cm}{*} % superior / inferior
+
+% Define o espaço entre linhas para 1.5 cm
+%\OnehalfSpacing	Bug no ABNTEX2?
+\renewcommand{\baselinestretch}{1.5}
