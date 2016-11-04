@@ -4,7 +4,6 @@
 %% 
 %% 
 
-\usepackage{float}
 \usepackage{graphicx}
 
 
@@ -237,3 +236,51 @@ BANCA EXAMINADORA
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
+
+
+\newcommand{\Caption}[1]{ %
+	\begin{Spacing}{1.5} %
+       	\caption{#1} %
+   	\end{Spacing} %
+}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+
+\newcommand{\Fonte}[2][\fontename]{ %
+%	\vspace{-3pt}
+	\vspace{8pt}
+ 		\fonte[#1]{#2}
+ 	\vspace{-5pt}
+}
+
+% Cria o comando para fazer notas e anotacoes na figura e na tabela
+\newcommand{\Nota}[2][\notaname]{\Fonte[#1]{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Lista de Quadro             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Novo list of (listings) para QUADROS
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de Quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space}
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+
+\newcommand{\imprimirlistadequadros}{ %
+	%\pdfbookmark[0]{\listofquadrosname}{loq} %
+	\listofquadros* %
+	\pagebreak %
+}
+
+
+\newcommand{\UFCfig}[3]{\IBGEtab{#1}{#2}{#3}}
+\newcommand{\UFCtab}[3]{\IBGEtab{#1}{#2}{#3}}
+\newcommand{\UFCqua}[3]{\IBGEtab{#1}{#2}{#3}}

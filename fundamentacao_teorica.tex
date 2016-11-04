@@ -27,12 +27,63 @@ Uma forma prática de encontrar os primeiros materiais é procurar nos anais de 
 Um texto pode conter diferentes tipos de ilustração, que são: uma "designação genérica de imagem que ilustra ou elucida um texto. São consideradas ilustrações: desenho, esquemas, fluxograma, gráfico, mapa, organograma, planta, quadro, retrato, figura, imagem, entre outros" ~ \cite{ufc_guia}. Todos eles podem ser rotulados pela palavra "Figura", como na Figura 1, ou receber denominações específicas como no Quadro 1. 
 Usa-se a denominação Tabelas, que tem formatação específica, apenas em caso de dados numéricos. Quando se tratar de dados textuais, deve-se denominar Quadro.
 
-Usa-se a denominação Tabelas, que tem formatação específica, apenas em caso de dados numéricos. Quando se tratar de dados textuais, deve-se denominar Quadro.
-
-\begin{figure}[H] %use h para forçar que a figura fique abaixo do texto
-	\caption{\label{fig:exemplo-1} Exemplo de formatação de figura}
-	\begin{center}
-	    \includegraphics[scale=0.2]{figuras/figura_1} % altere o atributo scale para o tamanho da figura
-	\end{center}
-	\legend{Fonte: \citeonline{portal_action}}
+%% Caso a imagem seja pequena, coloque borda para preencher a largura da página
+\begin{figure}[htbp]
+	\centering	
+	\UFCfig{
+	\Caption{Exemplo de figura \label{graf2}}		
+	}{
+	    \includegraphics[scale=0.4]{figuras/figura_1} % altere o atributo scale para o tamanho da figura
+	}{
+	\Fonte{Próprio Autor.}
+    }
 \end{figure}
+
+\begin{table}[h!]
+	\IBGEtab{
+	\Caption{\label{tabela-ibge} Um Exemplo de tabela alinhada que pode ser longa ou curta, conforme padrão IBGE.}%
+	}{%
+		\begin{tabular}{cccccc}
+			\toprule
+			Nome & Nascimento & Documento &  Nascimento & Documento & Nascimento \\
+			\midrule \midrule
+			Maria da Silva & 11/11/1111 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 \\
+			Maria da Silva & 11/11/1111 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 \\
+			Maria da Silva & 11/11/1111 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 & 111.111.111-11 \\
+			\bottomrule
+		\end{tabular}%
+	}{%
+	\Fonte{Produzido pelos autores}
+}
+\end{table}
+
+
+\begin{quadro}[h!]	
+	\centering
+	\UFCqua{
+	    \Caption{\label{qua:exemplo-1} Exemplo de Quadro}		
+	    }{
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Quisque & faucibus & pharetra \\
+			\hline
+			E1 & F1 & Complete coverage by a single transcript \\
+			\hline
+			E2 & F1 & Complete coverage by more than \\
+			\hline
+			E3 & F1 & Partial coverage \\
+			\hline
+			E4 & F1 & Partial coverage \\
+			\hline
+			E5 & F1 & Partial coverage \\
+			\hline
+			E6 & F1 & Partial coverage \\
+			\hline
+			E7 & F1 & Partial coverage \\
+			\hline
+		\end{tabular}
+	}{
+		\Fonte{Elaborado pelo autor}
+	}
+\end{quadro}
+	
